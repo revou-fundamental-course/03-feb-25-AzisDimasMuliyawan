@@ -1,11 +1,37 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Konverter Suhu</title>
+    <!-- Menghubungkan file CSS untuk styling -->
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+    <div class="container">
+        <h2>Konverter Suhu Sederhana</h2>
+        <!-- Input untuk memasukkan suhu -->
+        <input type="number" id="temperature" placeholder="Masukkan suhu" required>
+        <!-- Select untuk memilih metode konversi -->
+        <select id="conversionType">
+            <option value="CtoF">Celsius ke Fahrenheit</option>
+            <option value="FtoC">Fahrenheit ke Celsius</option>
+        </select>
+        <!-- Tombol untuk melakukan konversi dan mereset input -->
+        <button onclick="convertTemperature()">Konversi</button>
+        <button onclick="resetFields()">Reset</button>
+    </div>
     
+    <!-- Popup untuk menampilkan hasil konversi -->
+    <div id="popup" class="popup">
+        <div class="popup-content">
+            <!-- Tombol untuk menutup popup -->
+            <span class="close" onclick="closePopup()">&times;</span>
+            <p id="resultText"></p>
+        </div>
+    </div>
+    
+    <!-- Untuk Menghubungkan ke file JavaScript -->
+    <script src="js/script.js"></script>
 </body>
 </html>
